@@ -89,6 +89,22 @@ while (opcao !== 0) {
       break;
 
     case 4:
+        if (livros.length === 0) {
+            console.log("Nenhum livro cadastrado!");
+            break;
+        }
+        let auxiliar = new Livro();
+        let generos = auxiliar.contarPorGenero(livros);
+        console.log("\nQuantidade por gênero: ")
+
+        for (let genero in generos){
+            console.log(`${genero}: ${generos[genero]}`);
+        }
+
+        let media = Number(auxiliar.mediaNumPaginas(livros))
+
+        console.log(`\nMedia de paginas: ${media.toFixed(2)}`)
+        
       break;
 
     case 0:
