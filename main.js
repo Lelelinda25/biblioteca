@@ -1,4 +1,5 @@
 const prompt = require('prompt-sync')();
+const Livro = require('./livro');
 const livro = require('./livro');
 const livros = [];
 
@@ -20,6 +21,22 @@ while (opcao !== 0){
 }
 switch(opcao){
     case 1:
+        let titulo = prompt("titulo: ")
+        let autor = prompt("autor: ")
+        let genero = prompt("genero: ")
+        let anoPubli = parseInt(prompt("ano de publicaçao: "))
+         let numPaginas = parseInt(prompt("numero e paginas: "))
+
+         let novoLivro = new Livro(
+            titulo,
+            autor,
+            genero,
+            anoPubli,
+            numPaginas,
+
+         )
+         livros.push(novoLivro)
+         console.log("livro cadastrado")
         break;
 
      case 2:
