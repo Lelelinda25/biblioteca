@@ -11,10 +11,31 @@ while (opcao !== 0){
     console.log("4 -estatisticas")
     console.log("0 -sair")
 
-    
+
     opcao = parseInt(prompt("opçao: "))
     if (isNaN(opcao)){
         console.log("digite um numero valido");
         continue;
     }
+}
+switch(opcao){
+    case 1:
+        break;
+
+     case 2:
+        break;
+
+     case 3:
+        break;
+
+     case 4:
+        break;
+
+    case 0:
+        console.log("programa encerrado")
+        break;
+        default:
+            console.log("opcao invalida")  
+
+
 }
