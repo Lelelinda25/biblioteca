@@ -10,4 +10,11 @@ while (opcao !== 0){
     console.log("3 -alterar livro")
     console.log("4 -estatisticas")
     console.log("0 -sair")
+
+    
+    opcao = parseInt(prompt("opçao: "))
+    if (isNaN(opcao)){
+        console.log("digite um numero valido");
+        continue;
+    }
 }
