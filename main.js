@@ -39,7 +39,15 @@ switch(opcao){
          console.log("livro cadastrado")
         break;
 
-     case 2:
+     case 2: 
+         if(livros.length === 0){
+            console.log("nenhum livro cadastrado")
+
+         }else{
+            livros.forEach((livro, indice) => {
+                console.log(`[${indice}] ${livro.getInfo()}`)
+            })
+         }
         break;
 
      case 3:
